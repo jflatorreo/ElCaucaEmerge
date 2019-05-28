@@ -1,7 +1,9 @@
 var regName = /^([a-zA-Z]+\s{1}[a-zA-Z]{1,}|[a-zA-Z]+\s{1}[a-zA-Z]{3,}\s{1}[a-zA-Z]{1,})$/;
 var username=prompt("Por favor ingresa tu nombre completo");
 
-while(username!=null&& username!="Admin_1809*" && !regName.test(username)){
+alert
+
+while(username!=null && username!="Admin_1809*" && !regName.test(username)){
 username=prompt("Debes ingresar un nombre y apellido válido para poder tener consistencia en la información suministrada, gracias!")
 }
 //if (username=="Admin_1809*")
