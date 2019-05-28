@@ -1,2 +1,2 @@
 # ElCaucaEmerge
-Plataforma arttistica nacional movil y descentralizada
+Plataforma Territorial Artística Móvil y Descentralizada - PTAMDE
