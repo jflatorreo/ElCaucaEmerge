@@ -1,13 +1,16 @@
 var regName = /^([a-zA-Z]+\s{1}[a-zA-Z]{1,}|[a-zA-Z]+\s{1}[a-zA-Z]{3,}\s{1}[a-zA-Z]{1,})$/;
 var username=prompt("Por favor ingresa tu nombre completo");
-while(username!="Admin_1809*" && !regName.test(username)){
+
+while(username!=null&& username!="Admin_1809*" && !regName.test(username)){
 username=prompt("Debes ingresar un nombre y apellido válido para poder tener consistencia en la información suministrada, gracias!")
 }
 //if (username=="Admin_1809*")
 //var user=new PDFTron.WebViewer.User("Administrador", 1, 0);
 //else
-
-var user=new PDFTron.WebViewer.User(username, 0, 0);
+if (username!=null)
+  var user=new PDFTron.WebViewer.User(username, 0, 0);
+else
+  var user=new PDFTron.WebViewer.User("guest", 0, 1);
 
 var viewerElement = document.getElementById('viewer');
 var viewer = new PDFTron.WebViewer({
@@ -29,6 +32,8 @@ viewerElement.addEventListener('ready', function() {
 if (username=="Admin_1809*"){
 viewerInstance.setAdminUser(true);
 }
+  if (username==null)
+    viewerInstance.setReadOnly(true);
 
   // Add a save button on header
   viewerInstance.setHeaderItems(function(header) {
