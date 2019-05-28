@@ -397,7 +397,7 @@
                                         </a>
                                     </div>
                                     <div class="image-container">
-                                        <a href="https://youtu.be/QPRfjeYc3CM" id="open-youtube" data-gallery="example-gallery" class="col-sm-4">
+                                        <a href="https://youtu.be/QPRfjeYc3CM" id="open-youtube1" data-gallery="example-gallery" class="col-sm-4">
                                             <img src="http://i1.ytimg.com/vi/QPRfjeYc3CM/mqdefault.jpg" class="img-fluid">
                                         </a>
                                     </div>
@@ -453,6 +453,10 @@
                     $(this).ekkoLightbox();
                 });
                 $('#open-youtube').click(function (e) {
+                    e.preventDefault();
+                    $(this).ekkoLightbox();
+                });
+                $('#open-youtube1').click(function (e) {
                     e.preventDefault();
                     $(this).ekkoLightbox();
                 });
